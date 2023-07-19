@@ -1,0 +1,11 @@
+{
+  "name": "cruise-ships",
+  "version": "1.0.0",
+  "description": "A cruise ships app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Peter Skerritt",
+  "license": "ISC"
+}
