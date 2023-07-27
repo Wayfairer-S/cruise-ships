@@ -8,6 +8,7 @@ describe('with ports and an itinerary', () => {
     let dover;
     let calais;
     let itinerary;
+    let port;
 
     beforeEach(() => {
         dover = new Port('Dover');

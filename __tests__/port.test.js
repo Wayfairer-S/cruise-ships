@@ -17,6 +17,7 @@ describe('Port', () => {
       itinerary = new Itinerary([dover, calais]);
       titanic = {};
       queenMary = {};
+      const ship = jest.fn()
 
     });
 
@@ -32,6 +33,7 @@ describe('Port', () => {
 
  it("adds a ship", () => {
 
+   const ship = jest.fn();
 
    port.addShip(ship);
 
@@ -41,7 +43,8 @@ describe('Port', () => {
 
  it("removes a ship" , () => {
   
-
+   const ship = jest.fn();
+    
    port.addShip(titanic);
    port.addShip(queenMary);
    port.removeShip(queenMary);
