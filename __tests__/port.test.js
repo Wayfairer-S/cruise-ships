@@ -1,19 +1,37 @@
+const Itinerary = require('../src/itinerary.js');
 const Port = require('../src/port.js')
 
+
 describe('Port', () => {
+   let port;
+   let ship;
+   let titanic;
+   let queenMary;
+   let itinerary;
+   let dover;
+   let calais;
+ 
+   beforeEach(() => {
+      port = new Port('Dover');
+      calais = new Port('Calais')
+      itinerary = new Itinerary([dover, calais]);
+      titanic = {};
+      queenMary = {};
+
+    });
+
  it('can be instantiated', () => {
     expect(new Port()).toBeInstanceOf(Object);
  });
 
  it('has a name', () => {
-  const port = new Port('Dover');
+
 
   expect(port.name).toBe('Dover');
  })
 
  it("adds a ship", () => {
-   const port = new Port('Dover');
-   const ship = {};
+
 
    port.addShip(ship);
 
@@ -22,15 +40,13 @@ describe('Port', () => {
  })
 
  it("removes a ship" , () => {
-   const port = new Port('Dover');
-   const titanic = {};
-   const queenMary = {};
+  
 
    port.addShip(titanic);
    port.addShip(queenMary);
    port.removeShip(queenMary);
    
    expect(port.ships).toEqual([titanic]);
- })
+ });
 
 });
