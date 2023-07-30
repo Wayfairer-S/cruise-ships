@@ -1,4 +1,3 @@
-const Port = require('../src/port.js')
 const Itinerary = require('../src/itinerary.js')
 
 

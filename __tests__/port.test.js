@@ -32,7 +32,7 @@ describe('Port', () => {
  })
 
  it("adds a ship", () => {
-
+  
    const ship = jest.fn();
 
    port.addShip(ship);
@@ -42,9 +42,10 @@ describe('Port', () => {
  })
 
  it("removes a ship" , () => {
+
+   const titanic = jest.fn();
+   const queenMary = jest.fn();
   
-   const ship = jest.fn();
-    
    port.addShip(titanic);
    port.addShip(queenMary);
    port.removeShip(queenMary);
